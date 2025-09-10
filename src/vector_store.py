@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class VectorStoreBuilder:
-    def __init__(self,csv_path:str,persist_dir:str="chroma_db"):
+    def __init__(self,csv_path:str, persist_dir:str="chroma_db"):
         self.csv_path = csv_path
         self.persist_dir = persist_dir
         self.embedding = HuggingFaceEmbeddings(model_name = "all-MiniLM-L6-v2")
@@ -24,10 +24,10 @@ class VectorStoreBuilder:
         splitter = CharacterTextSplitter(chunk_size=1000,chunk_overlap=0)
         texts = splitter.split_documents(data)
 
-        db = Chroma.from_documents(texts,self.embedding,persist_directory=self.persist_dir)
+        db = Chroma.from_documents(texts, self.embedding, persist_directory=self.persist_dir)
         db.persist()
 
     def load_vector_store(self):
-        return Chroma(persist_directory=self.persist_dir,embedding_function=self.embedding)
+        return Chroma(persist_directory=self.persist_dir, embedding_function=self.embedding)
 
 
