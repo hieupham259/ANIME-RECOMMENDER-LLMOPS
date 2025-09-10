@@ -148,3 +148,9 @@ cython_debug/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Log
+logs/
+
+# Chroma
+chroma_db/
