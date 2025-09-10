@@ -18,6 +18,16 @@ The system is designed to run on Minikube deployed on a Google Cloud Platform VM
 - Minikube installed and configured
 - Docker Engine
 
+### Run Locally
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Setup environment
+pip install -e .
+```
+
 ## Architecture
 
 - **Backend**: LangChain-based recommendation engine
