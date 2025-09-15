@@ -28,6 +28,13 @@ git clone <repository-url>
 pip install -e .
 ```
 
+### Build and Deploy your APP on VM
+```bash
+chmod +x deploy_app.sh
+./deploy_app.sh
+```
+
+
 ## Architecture
 
 - **Backend**: LangChain-based recommendation engine
